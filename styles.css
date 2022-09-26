@@ -1,0 +1,623 @@
+body {
+  background-color: #e4e7f0;
+  color: #333;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  width: 100vw;
+  height: fit-content;
+  min-width: 345;
+  max-width: 1920;
+  align-content: center;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.tab {
+  margin-top: 60px;
+}
+
+/* Tab container*/
+.tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-subcontainer {
+  width: 96%;
+  align-items: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Page */
+
+P {
+  color: #333;
+  text-align: center;
+  padding: 8px 20px;
+  text-decoration: none;
+  margin: 1px;
+}
+
+h1 {
+  color: #333;
+  width: auto;
+  display: inline-block;
+  margin: 25% 25% 25% 70%;
+}
+
+h2 {
+  color: #333;
+  font-size: 1rem;
+  line-height: 2.3125rem;
+}
+
+h3 {
+  display: block;
+  font-size: 18px;
+  margin: 4px;
+  font-weight: bold;
+}
+
+hr {
+  color: #121212;
+  margin: 20px;
+  width: 80vw;
+}
+
+.hr-container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.container-heading {
+  font-weight: 400;
+}
+
+.section-heading {
+  color: #000000;
+}
+
+/* ! input/text boxes */
+
+input {
+  text-align: center;
+}
+
+.textarea {
+  padding: 2px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  width: 350px;
+  max-width: 80%;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.textarea:active {
+  border: none;
+}
+
+/* ! Containers */
+
+/*.main-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100vw;
+  }*/
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0px;
+  justify-content: center;
+  height: auto;
+  width: 98%;
+  overflow-y: auto;
+}
+
+.container {
+  background-color: #f1f1f1;
+  border-radius: 0.4rem;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  height: fit-content;
+  width: 20%;
+  min-width: 320px;
+  /*box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);*/
+}
+
+.large-container {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 20px 4px 4px -25px;
+  text-align: center;
+  height: 160px;
+  width: 1800px;
+}
+
+/* ! Buttons */
+/* #875 6e4; */
+
+.button-primary {
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  color: #f1f1f1;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 12px;
+  margin: 4px;
+  width: 100px;
+}
+
+.button-primary:active {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.button-secondary {
+  background-color: #f1f1f1;
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  color: #333;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 12px;
+  margin: 4px;
+  width: 100px;
+}
+
+.button-secondary:active {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #f1f1f1;
+}
+
+.copy-button {
+  background-color: #f1f1f1;
+  border: solid #f1f1f1;
+  border-radius: 0.25rem;
+  color: #333;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px;
+  width: 100px;
+}
+
+.copy-button:active {
+  background-color: #03a9f4;
+  color: #f3f2f8;
+  border: solid #03a9f4;
+}
+
+/* ! Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ! Navbar */
+
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: #333; /* #2186 4ab, #4da ae9, #0f4 c81, #223 048, #006 7a3, #2a4 c7e */
+  /* #1b1d2d */
+  padding: 0 15px;
+  /* ! NEW TEST TO IMPROVE NAV 
+  position: relative;
+  width: 100vw;
+  */
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item.button {
+  padding: 9px 6px;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 5px 5px; /* Was 15px 5px but reduced to save veritcal space */
+}
+
+.menu li.subitem a {
+  padding: 15px;
+}
+
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+  font-weight: 600;
+}
+
+.active .item {
+  display: block;
+}
+
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu i {
+  font-size: 12px;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+
+.subitem a {
+  padding: 10px 15px;
+}
+
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+
+  .button a {
+    background: #0a192f;
+    border: 1px royalblue solid;
+  }
+
+  .button.secondary {
+    border: 0;
+  }
+
+  .button.secondary a {
+    background: transparent;
+    border: 1px #0a192f solid;
+  }
+
+  .button a:hover {
+    text-decoration: none;
+  }
+
+  .button:not(.secondary) a:hover {
+    background: royalblue;
+    border-color: darkblue;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+
+  .button {
+    order: 2;
+  }
+
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .submenu-active {
+    border-radius: 0;
+  }
+}
+
+#active-tab {
+  border-bottom: 2px solid #fff;
+}
+
+/* end of navbar */
+
+/* ! dark mode toggle 
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+ Rounded sliders 
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+ light mode settings 
+.light-mode {
+  background-color: #f1f1f1;
+}
+
+.light-mode1 {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.light-mode1 {
+  background-color: #f4f4f2;
+  color: #000;
+}
+
+*/
+
+#button {
+  height: 30px;
+  width: 180px;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #0096cc;
+  border: solid #0096cc;
+  color: #333;
+  margin: -2px 0px 0px 0px;
+  padding: 2px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px;
+}
+
+/* ! Footer */
+
+/*footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #333;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}*/
+
+footer {
+  clear: both;
+  position: relative;
+  z-index: 1;
+  height: -3em;
+  margin-top: 20px;
+  background-color: #333;
+}
