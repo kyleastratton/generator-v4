@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a192f" />
+    <meta name="apple-mobile-web-app-title" content="personal-details" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>KAS</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="./index.html">KAS</a></li>
+        <li class="item"><a href="./index.html">Home</a></li>
+        <li class="item"><a href="./generator.html">Generator</a></li>
+        <li class="item"><a href="./percentage.html">Percentages</a></li>
+        <li class="item"><a href="#">Converter</a></li>
+        <li class="item"><a href="#">Calculator</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Help</a></li>
+        <li class="toggle">
+          <a href="#"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="tab-container">
+      <div class="tab-subcontainer">
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'personal-details')"
+            id="defaultOpen"
+          >
+            Personal Details
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'miscellaneous')">
+            Miscellaneous
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'words')">
+            Words
+          </button>
+        </div>
+
+        <div id="personal-details" class="tabcontent">
+          <div class="main-container">
+            <div class="flex-container">
+              <!-- <div class="heading">
+                            <h3 id="pd" class="section-heading">Personal Details</h3>
+                        </div> -->
+
+              <div class="container" id="container1">
+                <p class="container-heading" id="heading1">Name</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="fullname"
+                    value="John Doe"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateName()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('fullname')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container2">
+                <p class="container-heading" id="heading2">Address</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="address"
+                    value="123 Acacia Avenue, Anytown, AB1 2CD"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateAddress()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('address')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container5">
+                <p class="container-heading" id="heading5">Mobile Number</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="mobileNumber"
+                    value="07123456789"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateMobile()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('mobileNumber')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container6">
+                <p class="container-heading" id="heading6">Bank</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="bank"
+                    value="Example Bank"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateBank()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('bank')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container8">
+                <p class="container-heading" id="heading9">Sort Code</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="sortCode"
+                    value="00-00-00"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateSortCode()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('sortCode')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container7">
+                <p class="container-heading" id="heading8">Account Number</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="accountNumber"
+                    value="0000 0000"
+                  />
+                  <br /><br />
+                  <button
+                    class="button-primary"
+                    onclick="generateAccountNumber()"
+                  >
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('accountNumber')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container10">
+                <p class="container-heading" id="heading10">UK IBAN</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="iban"
+                    value="GB12ABCD12340123456789"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateIban()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('iban')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container11">
+                <p class="container-heading" id="heading11">Swift Code</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="swiftCode"
+                    value="ABCDGB123EF"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateSwift()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('swiftCode')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="miscellaneous" class="tabcontent">
+          <div class="main-container">
+            <div class="flex-container">
+              <div class="container" id="container3">
+                <p class="container-heading" id="heading3">Password</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="applePass"
+                    value="-"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="assignApplePass()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('applePass')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container9">
+                <p class="container-heading" id="heading7">Number</p>
+                <div>
+                  <input class="textarea" type="text" id="number" value="-" />
+                  <br /><br />
+                  <button
+                    class="button-primary"
+                    onclick="generateRandomNumber()"
+                  >
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('number')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container4">
+                <p class="container-heading" id="heading16">UUID</p>
+                <div>
+                  <input class="textarea" type="text" id="uuid" value="-" />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateUUID()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('uuid')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container12">
+                <p class="container-heading" id="heading12">Work Type</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="workType"
+                    value="General"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateWorkType()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('workType')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="words" class="tabcontent">
+          <div class="main-container">
+            <div class="flex-container">
+              <div class="container" id="container13">
+                <p class="container-heading" id="heading13">Word</p>
+                <div>
+                  <input class="textarea" type="text" id="word" value="-" />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateWord()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-primary"
+                    onclick="copyToClipboard('word')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container14">
+                <p class="container-heading" id="heading14">Adjective</p>
+                <div>
+                  <input
+                    class="textarea"
+                    type="text"
+                    id="adjective"
+                    value="-"
+                  />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateAdjective()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('adjective')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container15">
+                <p class="container-heading" id="heading15">Noun</p>
+                <div>
+                  <input class="textarea" type="text" id="noun" value="-" />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateNoun()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('noun')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="container" id="container16">
+                <p class="container-heading" id="heading16">Verb</p>
+                <div>
+                  <input class="textarea" type="text" id="verb" value="-" />
+                  <br /><br />
+                  <button class="button-primary" onclick="generateVerb()">
+                    Generate
+                  </button>
+                  <button
+                    class="button-secondary"
+                    onclick="copyToClipboard('verb')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+}
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

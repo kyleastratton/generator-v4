@@ -79,6 +79,12 @@ P {
   margin: 1px;
 }
 
+.p-half {
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+}
+
 h1 {
   color: #333;
   width: auto;
@@ -119,7 +125,7 @@ hr {
 }
 
 .container-heading {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .section-heading {
@@ -148,6 +154,22 @@ input {
   border-radius: 0.25rem;
 }
 
+.textarea-half {
+  padding: 2px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  width: 50px;
+  max-width: 80%;
+  border: none;
+  border-radius: 0.25rem;
+}
+
 .textarea:active {
   border: none;
 }
@@ -166,10 +188,17 @@ input {
   flex-wrap: wrap;
   flex-direction: row;
   padding: 0px;
-  justify-content: center;
+  /* justify-content: center */
+  margin: 0 10%;
   height: auto;
   width: 98%;
   overflow-y: auto;
+}
+
+.flex-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .container {
@@ -268,6 +297,7 @@ input {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  display: block;
 }
 
 /* Track */
@@ -620,4 +650,119 @@ footer {
   height: -3em;
   margin-top: 20px;
   background-color: #333;
+}
+
+main {
+  display: block;
+  min-height: 600px;
+  padding: 0 10px 100px 10px;
+  text-align: left;
+}
+
+@media (min-width: 728px) {
+  main {
+      margin: 0 auto;
+      max-width: 728px;
+  }
+}
+
+.form {
+  background-color: #f9f9f9;
+  /* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#f9f9f9));
+  background: -o-linear-gradient(left, #e6e6e6, #f9f9f9);
+  background: linear-gradient(left, #e6e6e6, #f9f9f9); */
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  line-height: 1.45;
+  margin: 10px 0px 10px 10px;
+  padding: 10px 20px;
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.form:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+
+@media (min-width: 728px) {
+  .form .values {
+    float: left;
+    width: 60%;
+  }
+}
+
+.form .values {
+  float: left;
+  width: 60%;
+  /* padding: 0; */
+}
+
+.form fieldset {
+  border: none;
+  /* margin: 10px 0; */
+  /* width: 100%; */
+}
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  /* padding-inline-end: 0.75em; */
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: rgb(192, 192, 192);
+  border-image: initial;
+}
+
+.form input[type=text] {
+  margin: 5px 3px;
+  /* font-size: 1.8rem; */
+}
+
+.form input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.4rem;
+  padding: 5px;
+}
+
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+
+input {
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 0em;
+  padding: 1px 0px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  padding-block: 1px;
+  padding-inline: 2px;
 }

@@ -1,0 +1,60 @@
+# What percent of 175 is 25?
+
+Solution: 25 is what percent of 175 is equal to (25 / 175) × 100 = 14.29%. So if you buy an item at $175 with $25 discounts, you will pay $150 and get 14.29% discount cashback rewards
+
+
+# Subtract percentage of Y
+
+Example 1: You have a 20 percent off coupon. The item you want to buy is $149.99. What is the cost of the item after using the coupon?
+The amount you will save is: 20% of
+$149.99 = $29.99. The cost of the item
+after using the coupon is: $149.99 -
+$29.99 = $119.99
+Example 2. You have received a salary of $ 350 in cash and want to know how much you have enough money left after paying taxes.
+
+
+# Add a Percentage to Y
+
+Example 1: The sales tax rate is 7.2%
+An item costs $59.99
+What is the amount of sales tax?
+Solution: The amount of sales tax is:
+7.2% of $59.99 = $4.31 The total cost
+with tax is: $59.99 + $4.00 = $64.3
+Example 2: Your restaurant bill is $72.51 and you want to leave a 15% tip.
+How much is the tip?
+Solution: The amount of the tip is: 15%
+of $72.51 = $10.87. The total restaurant
+bill plus the tip is: $72.51 + $10.87 =
+$83.38
+
+
+# What is the percent of increase or decrease
+
+Example 1: Julia's intern job at a company paid $17.22 an hour. After a while, Julia began earning $41.31 per hour. What is Julia's percent increase in pay?
+Solution: Using the Percent Change
+Calculator, dropping the two amounts into it quickly returns a percent pay increase of 139.89%. Here's how the calculator found the percent increase.
+Example 2. You bought the Cryptocurrency of 0.2 cents, in a year the price of the coin increased to $7.5.
+What is the percentage of the price of the coin and your earnings?
+Solution. In this case, the price of the coin increased by 3650%
+
+
+# Calculations
+
+// what is x% of y?
+
+result = x * y / 100;
+
+
+// x is what percent of y?
+
+result = x / y * 100;
+
+
+// what is percentage increase/decrease from x to y?
+
+  let a = y - x;
+  result = a / x * 100
+  // a positive change is an increase.
+  // a negative change is a decrease.
+

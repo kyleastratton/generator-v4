@@ -1,19 +1,3 @@
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
-
 // ! Generator
 
 let femaleNames = [
@@ -1500,8 +1484,8 @@ function generateName() {
   let result = generatedSurname.substring(0, 3);
   let result1 = result.toUpperCase();
   result2 = result1 + "01" + "-" + "01";
-  console.log(result2);
-  // ? Create new card for matter numebr and add function to write value
+  // console.log(result2);
+  // ? Create new card for matter number and add function to write value
 }
 
 // function generateMatterNumber() {
@@ -1514,11 +1498,6 @@ function generateName() {
 //  generateMatterNumber();
 
 //! NUMBERS
-
-// function generateRandomNumber() {
-//     let RndInteger = Math.floor(Math.random() * 1000);
-//     document.getElementById('generatedNumber').value = RndInteger;
-// }
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -1842,7 +1821,6 @@ function getTown() {
   return Math.floor(Math.random() * town.length);
 }
 
-// Onlick function
 function generateAddress() {
   const generatedNumber = getRandomInt(1000);
   const generatedStreetPrefix = getStreetPrefix();
@@ -1878,11 +1856,6 @@ function generateMobile() {
 }
 
 //! Generate sort code
-
-// function generateSortCode() {
-//     let sortcode1 = generateNumber(6);
-//     document.getElementById("sortCode").value = sortcode1;
-// }
 
 function formatSortCode(str) {
   return (String(str).match(/.{1,2}/g) || []).join("-");
@@ -1958,13 +1931,6 @@ function generateBank() {
 }
 
 //! IBAN
-
-// function generateIban() {
-//     const countryCode = generateCharacter(2);
-//     const checkDigits = generateNumber(2);
-//     const bban = generateCharacter(4) + generateNumber(6) + generateNumber(8);
-//     document.getElementById("iban").value = countryCode + checkDigits + bban;
-// }
 
 const countryCode = [
   "AF",
@@ -2393,10 +2359,6 @@ function generateUUID() {
   document.getElementById("uuid").value = generatedUUID;
 }
 
-// ! Landlines
-
-// ! copyToClipboard function
-
 // function copyToClipboard(id) {
 //     var copyText = document.getElementById(id);
 //     var textArea = document.createElement("textarea");
@@ -2456,66 +2418,6 @@ function closeSubmenu(e) {
   }
 }
 
-// ? Not in use
-
-// ! Event Listeners
-// toggle.addEventListener("click", toggleMenu, false);
-// for (let item of items) {
-//   if (item.querySelector(".submenu")) {
-//     item.addEventListener("click", toggleItem, false);
-//   }
-//   item.addEventListener("keypress", toggleItem, false);
-// }
-
-// document.addEventListener("click", closeSubmenu, false);
-
-// ! Store & Retrieve themes in local storage
-
-// Select the button
-//const btn = document.querySelector(".btn-toggle");
-// Select the theme preference from localStorage
-//const currentTheme = localStorage.getItem("theme");
-
-// If the current theme in localStorage is "dark"...
-//if (currentTheme == "dark") {
-// ...then use the .dark-theme class
-//document.body.classList.add("dark-theme");
-//}
-
-// Listen for a click on the button
-//btn.addEventListener("click", function() {
-// Toggle the .dark-theme class on each click
-//document.body.classList.toggle("dark-theme");
-
-// Let's say the theme is equal to light
-//let theme = "light";
-// If the body contains the .dark-theme class...
-//if (document.body.classList.contains("dark-theme")) {
-// ...then let's make the theme dark
-//theme = "dark";
-//}
-// Then save the choice in localStorage
-//localStorage.setItem("theme", theme);
-//});
-
-// ! Old navbar logic
-
-// function updatePageName() {
-//     let text = document.getElementById("active").innerHTML;
-//     document.getElementById("pagename").textContent = text;
-// }
-
-// updatePageName();
-
-// function myFunction() {
-//   var x = document.getElementById("myTopnav");
-//   if (x.className === "topnav") {
-//     x.className += " responsive";
-//   } else {
-//     x.className = "topnav";
-//   }
-// }
-
 // console.log(maleNames.find((el) => el.length > 3));
 // console.log(surname.find((el) => el.length > 4));
 
@@ -2523,14 +2425,51 @@ function closeSubmenu(e) {
 
 let maleNames1 = maleNames.filter((maleNames) => maleNames.length > 2);
 let maleNames2 = maleNames1.filter((maleNames1) => maleNames1.length < 4);
-console.log("maleName:", maleNames2);
+// console.log("maleName:", maleNames2);
 
 let femaleNames1 = femaleNames.filter((femaleNames) => femaleNames.length > 4);
 let femaleNames2 = femaleNames1.filter(
   (femaleNames1) => femaleNames1.length < 6
 );
-console.log("femaleName:", femaleNames2);
+// console.log("femaleName:", femaleNames2);
 
 let surname1 = surname.filter((surname) => surname.length > 7);
 let surname2 = surname1.filter((surname1) => surname1.length < 9);
-console.log("surname:", surname2);
+// console.log("surname:", surname2);
+
+function calculatePercentage1() {
+  const value1 = document.getElementById("value1").value;
+  const value2 = document.getElementById("value2").value;
+  let result = value2 * value1 / 100;
+  let formattedResult = Math.round((result + Number.EPSILON) * 100) / 100;
+  if (value1 == 0 || value2 == 0) {
+    document.getElementById("result1").value = "0";
+  } else {
+    document.getElementById("result1").value = formattedResult;
+  }
+}
+
+function calculatePercentage2() {
+  const value3 = document.getElementById("value3").value;
+  const value4 = document.getElementById("value4").value;
+  let result = value3 / value4 * 100;
+  let formattedResult = Math.round((result + Number.EPSILON) * 100) / 100;
+  if (value3 == 0 || value4 == 0) {
+    document.getElementById("result2").value = "0";
+  } else {
+    document.getElementById("result2").value = formattedResult;
+  }
+}
+
+function calculatePercentage3() {
+  const value5 = document.getElementById("value5").value;
+  const value6 = document.getElementById("value6").value;
+  let a = value6 - value5;
+  let result = a / value5 * 100;
+  let formattedResult = Math.round((result + Number.EPSILON) * 100) / 100;
+  if (value5 == 0 || value6 == 0) {
+    document.getElementById("result3").value = "0";
+  } else {
+    document.getElementById("result3").value = formattedResult;
+  }
+}
