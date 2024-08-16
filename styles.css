@@ -3,7 +3,7 @@ body {
   color: #333;
   font-family: "Poppins";
   font-style: normal;
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.5px;
@@ -71,10 +71,26 @@ body {
 
 /* Page */
 
-P {
+.gutter-sides {
+  margin: 0 2rem !important;
+}
+
+.gutter-sides--half {
+  margin: 0 1rem !important;
+}
+
+.gutter-left {
+  margin: 0 2rem 0 0 !important;
+}
+
+.gutter-right {
+  margin: 0 0 0 2rem !important;
+}
+
+p {
   color: #333;
   text-align: center;
-  padding: 8px 20px;
+  /* padding: 8px 20px; */
   text-decoration: none;
   margin: 1px;
 }
@@ -152,8 +168,9 @@ input {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
-  width: 350px;
-  max-width: 80%;
+  /* width: 350px; */
+  width: 90%;
+  max-width: 90%;
   border: none;
   border-radius: 0.25rem;
 }
@@ -181,11 +198,15 @@ input {
 /* ! Containers */
 
 .main-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100vw;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+}
+
+.light-grey {
+  background-color: lightgrey
+}
 
 .flex-container {
   display: flex;
@@ -205,8 +226,8 @@ input {
   justify-content: center;
 }
 
-.container {
-  background-color: #f1f1f1;
+.card {
+  background-color: #f9f9f9;
   border-radius: 0.4rem;
   padding: 1%;
   margin: 1%;
@@ -656,117 +677,67 @@ footer {
   background-color: #333;
 }
 
-main {
-  display: block;
-  min-height: 600px;
-  padding: 0 10px 100px 10px;
-  text-align: left;
-}
-
-@media (min-width: 728px) {
-  main {
-      margin: 0 auto;
-      max-width: 728px;
-  }
-}
-
-.form {
-  background-color: #f9f9f9;
-  /* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#f9f9f9));
-  background: -o-linear-gradient(left, #e6e6e6, #f9f9f9);
-  background: linear-gradient(left, #e6e6e6, #f9f9f9); */
-  border: 1px solid #e9e9e9;
-  border-radius: 10px;
-  line-height: 1.45;
-  margin: 10px 0px 10px 10px;
-  padding: 10px 20px;
-  width: 98vw;
+.container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  font-size: 1.4rem;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  margin: 2vw;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  width: 95vw;
+  /* line-height: 1.8rem; */
 }
 
-.form:after {
-  clear: both;
-  content: "";
-  display: block;
-  height: 0;
+.section-60 {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
 }
 
-@media (min-width: 728px) {
-  .form .values {
-    float: left;
-    width: 60%;
+.section-30 {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+/* prepare wrapper element */
+.suffix {
+  display: inline-block;
+  position: relative;
+}
+
+/* position the unit to the right of the wrapper */
+.suffix::after {
+  position: absolute;
+  top: 2px;
+  right: .5em;
+  transition: all .05s ease-in-out;
+}
+
+/* move unit more to the left on hover or focus within
+   for arrow buttons will appear to the right of number inputs */
+.suffix:hover::after,
+.suffix:focus-within::after {
+  right: 1.5em;
+}
+
+/* handle Firefox (arrows always shown) */
+@supports (-moz-appearance:none) {
+  .suffix::after {
+    right: 1.5em;
   }
 }
 
-.form .values {
-  float: left;
-  width: 60%;
-  /* padding: 0; */
+/* set the unit abbreviation for each unit class */
+.ms::after {
+  content: 'ms';
 }
-
-.form fieldset {
-  border: none;
-  /* margin: 10px 0; */
-  /* width: 100%; */
+.db::after {
+  content: 'db';
 }
-
-fieldset {
-  display: block;
-  margin-inline-start: 2px;
-  margin-inline-end: 2px;
-  padding-block-start: 0.35em;
-  padding-inline-start: 0.75em;
-  /* padding-inline-end: 0.75em; */
-  padding-block-end: 0.625em;
-  min-inline-size: min-content;
-  border-width: 2px;
-  border-style: groove;
-  border-color: rgb(192, 192, 192);
-  border-image: initial;
-}
-
-.form input[type=text] {
-  margin: 5px 3px;
-  /* font-size: 1.8rem; */
-}
-
-.form input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.4rem;
-  padding: 5px;
-}
-
-input[type="text" i] {
-  padding-block: 1px;
-  padding-inline: 2px;
-}
-
-.input1 {
-  text-rendering: auto;
-  color: fieldtext;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  appearance: auto;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  background-color: field;
-  margin: 0em;
-  padding: 1px 0px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-  padding-block: 1px;
-  padding-inline: 2px;
+.percent::after {
+  content: '%';
 }

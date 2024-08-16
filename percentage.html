@@ -53,42 +53,66 @@
     </ul>
   </nav>
 
-  <div class="main">
+  <div main-container>
 
-    <form class="form" id="f1">
-      <fieldset class="values">
-        What is <input id=value1 class="input1" type="text" size="3" autofocus="autofocus"> %
-        <span>of <input id="value2" class="input1" type="text" size="7">?</span>
-      </fieldset>
-      <fieldset class="results">
-        <!-- <input type="submit" value="Calculate"> -->
-        <button type="button" onclick="calculatePercentage1()">Calculate</button>
-        <input id=result1 class="input1" type="text" size="6" readonly="readonly"><span class="hide">&nbsp;%</span>
-      </fieldset>
-    </form>
+    <div class="container light-grey">
+      <div class="section-60">
+        <p>What is</p>
+        <div class="percent suffix gutter-sides--half">
+          <input id="value1" type="number" class="percentages">
+        </div>
+        <p> of</p>
+        <div class="suffix gutter-sides--half">
+          <input id="value2" type="number" class="percentages">
+        </div>
+      </div>
+      <div class="section-30">
+        <button type="button" class="button-primary gutter-sides" readonly="readonly" onclick="calculatePercentage1()">Calculate</button>
+        <div class="percent suffix">
+          <input id="result1" type="number" class="percentages">
+        </div>
+      </div>
+    </div>
 
-    <form class="form" id="f2">
-      <fieldset class="values">
-        <input id="value3" class="input1" type="text" size="5" style="background: rgb(255, 255, 255);"> is what percent
-        <span>of <input id="value4" class="input1" type="text" size="5" style="background: rgb(255, 255, 255);">?</span>
-      </fieldset>
-      <fieldset class="results">
-        <button type="button" onclick="calculatePercentage2()">Calculate</button>
-        <input id="result2" class="input1" type="text" size="6" readonly="readonly"><span>&nbsp;%</span>
-      </fieldset>
-    </form>
-
-    <form class="form" id="f3">
-      <fieldset class="values">
-        What is the percentage increase/decrease<br>
-        <span>from <input id="value5" class="input1" type="text" size="5" style="background: rgb(255, 255, 255);"></span>
-        <span>to <input id="value6" class="input1" type="text" size="5" style="background: rgb(255, 255, 255);">?</span>
-      </fieldset>
-      <fieldset class="results"><br class="remove">
-        <button type="button" onclick="calculatePercentage3()">Calculate</button>
-        <input id="result3" class="input1" type="text" size="6" readonly="readonly"><span>&nbsp;%</span>
-      </fieldset>
-    </form>
+    <div class="container light-grey">
+      <div class="section-60">
+        <div class="suffix gutter-sides--half">
+          <input id="value3" type="number" class="percentages">
+        </div>
+        <p>is what percent of</p>
+        <div class="suffix">
+          <input id="value4" type="number" class="percentages">
+        </div>
+      </div>
+      <div class="section-30">
+        <button type="button" class="button-primary gutter-sides" readonly="readonly" onclick="calculatePercentage2()">Calculate</button>
+        <div class="percent suffix">
+          <input id="result2" type="number" class="percentages">
+        </div>
+      </div>
+    </div>
+    
+    <div class="container light-grey">
+      <div class="section-60">
+        <p>What is the percentage increase/decrease from</p>
+        <div class="suffix gutter-sides--half">
+          <input id="value5" type="number" class="percentages">
+        </div>
+        <p> to</p>
+        <div class="suffix gutter-sides--half">
+          <input id="value6" type="number" class="percentages">
+        </div>
+      </div>
+      <div class="section-30">
+        <button type="button" class="button-primary gutter-sides" readonly="readonly" onclick="calculatePercentage3()">Calculate</button>
+        <!-- <input id="my-input"> -->
+        <div class="percent suffix">
+          <input id="result3" type="number" class="percentages">
+        </div>
+        <!-- <button suffix>%</button> -->
+        <!-- <span>&nbsp;%</span> -->
+      </div>
+    </div>
 
   </div>
   
