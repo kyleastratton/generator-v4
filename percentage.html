@@ -37,7 +37,7 @@
   />
 </head>
 <body>
-  <nav>
+  <!-- <nav>
     <ul class="menu">
       <li class="logo"><a href="./index.html">KAS</a></li>
       <li class="item"><a href="./index.html">Home</a></li>
@@ -51,7 +51,27 @@
         <a href="#"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
+
+  <div class="topnav" id="myTopnav">
+    <a href="./index.html">Home</a>
+    <a href="./generator.html">Generator</a>
+    <a href="./percentage.html" class="active">Percentage Calculator</a>
+    <a href="./converter.html">Converter</a>
+    <a href="./calculator.html">Calculator</a>
+    <!-- <div class="dropdown">
+      <button class="dropbtn">Dropdown 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>  -->
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
 
   <div main-container>
 
@@ -61,7 +81,7 @@
         <div class="percent suffix gutter-sides--half">
           <input id="value1" type="number" class="percentages">
         </div>
-        <p> of</p>
+        <p>of</p>
         <div class="suffix gutter-sides--half">
           <input id="value2" type="number" class="percentages">
         </div>
@@ -98,7 +118,7 @@
         <div class="suffix gutter-sides--half">
           <input id="value5" type="number" class="percentages">
         </div>
-        <p> to</p>
+        <p>to</p>
         <div class="suffix gutter-sides--half">
           <input id="value6" type="number" class="percentages">
         </div>
@@ -117,5 +137,15 @@
   </div>
   
   <script src="scripts.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 </body>
 </html>
