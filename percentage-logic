@@ -41,17 +41,17 @@ Solution. In this case, the price of the coin increased by 3650%
 
 # Calculations
 
-// what is x% of y?
+// what is x% of y? (x% of y)
 
 result = x * y / 100;
 
 
-// x is what percent of y?
+// x is what percent of y? (x of y)
 
 result = x / y * 100;
 
 
-// what is percentage increase/decrease from x to y?
+// what is percentage increase/decrease from x to y? (x to y)
 
   let a = y - x;
   result = a / x * 100
