@@ -2431,3 +2431,14 @@ function calculatePercentage3() {
     document.getElementById("result3").value = formattedResult;
   }
 }
+
+// navbar logic
+
+function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
